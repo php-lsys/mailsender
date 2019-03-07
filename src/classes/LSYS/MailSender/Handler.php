@@ -32,7 +32,7 @@ abstract class Handler{
 	 * @param string $mail_name
 	 * @return \LSYS\MailSender\Handler
 	 */
-	public function set_from($from_mail,$mail_name=null){
+	public function setFrom($from_mail,$mail_name=null){
 		$this->_from_mail=$from_mail;
 		$this->_from_name=$mail_name;
 		return $this;
@@ -43,7 +43,7 @@ abstract class Handler{
 	 * @param string $mail_name
 	 * @return \LSYS\MailSender\Handler
 	 */
-	public function set_reply($reply_to_mail,$mail_name=null){
+	public function setReply($reply_to_mail,$mail_name=null){
 		$this->_reply_to_mail=$reply_to_mail;
 		$this->_reply_to_name=$mail_name;
 		return $this;
@@ -53,7 +53,7 @@ abstract class Handler{
 	 * @param array $tos
 	 * @return \LSYS\MailSender\Handler
 	 */
-	public function set_to(array $tos){
+	public function setTo(array $tos){
 		$this->_to=$tos;
 		return $this;
 	}
@@ -62,7 +62,7 @@ abstract class Handler{
 	 * @param array $ccs
 	 * @return \LSYS\MailSender\Handler
 	 */
-	public function set_cc(array $ccs){
+	public function setCc(array $ccs){
 		$this->_cc=$ccs;
 		return $this;
 	}
@@ -71,7 +71,7 @@ abstract class Handler{
 	 * @param array $bccs
 	 * @return \LSYS\MailSender\Handler
 	 */
-	public function set_bcc(array $bccs){
+	public function setBcc(array $bccs){
 		$this->_bcc=$bccs;
 		return $this;
 	}

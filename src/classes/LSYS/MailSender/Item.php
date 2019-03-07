@@ -26,7 +26,7 @@ class Item{
 	 * 获取邮件内容
 	 * @return \LSYS\MailSender\Eml
 	 */
-	public function get_eml(){
+	public function getEml(){
 		return $this->_eml;
 	}
 	/**
@@ -35,7 +35,7 @@ class Item{
 	 * @param string $name
 	 * @return \LSYS\MailSender\Item
 	 */
-	public function set_reply($email,$name=null){
+	public function setReply($email,$name=null){
 		$this->_reply=array($email,$name);	
 		return $this;
 	}
@@ -45,7 +45,7 @@ class Item{
 	 * @param string $name
 	 * @return \LSYS\MailSender\Item
 	 */
-	public function add_to($email,$name=null){
+	public function addTo($email,$name=null){
 		$this->_to[]=array($email,$name);
 		return $this;
 	}
@@ -55,7 +55,7 @@ class Item{
 	 * @param string $name
 	 * @return \LSYS\MailSender\Item
 	 */
-	public function add_cc($email,$name=null){
+	public function addCc($email,$name=null){
 		$this->_cc[]=array($email,$name);
 		return $this;
 	}
@@ -65,7 +65,7 @@ class Item{
 	 * @param string $name
 	 * @return \LSYS\MailSender\Item
 	 */
-	public function add_bcc($email,$name=null){
+	public function addBcc($email,$name=null){
 		$this->_bcc[]=array($email,$name);
 		return $this;
 	}
@@ -73,28 +73,28 @@ class Item{
 	 * 获取接收者
 	 * @return array
 	 */
-	public function get_tos(){
+	public function getTos(){
 		return $this->_to;
 	}
 	/**
 	 * 获取抄送
 	 * @return array
 	 */
-	public function get_ccs(){
+	public function getCcs(){
 		return $this->_cc;
 	}
 	/**
 	 * 获取密送
 	 * @return array
 	 */
-	public function get_bccs(){
+	public function getBccs(){
 		return $this->_bcc;
 	}
 	/**
 	 * 设置回复
 	 * @return string
 	 */
-	public function get_reply(){
+	public function getReply(){
 		return $this->_reply;
 	}
 }

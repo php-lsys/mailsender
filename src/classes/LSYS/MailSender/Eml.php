@@ -22,7 +22,7 @@ class Eml{
 	 * set mail tpl
 	 * @return mixed
 	 */
-	public function get_name(){
+	public function getName(){
 		return $this->name;
 	}
 	protected $title='';
@@ -31,7 +31,7 @@ class Eml{
 	 * @param array $data
 	 * @return \LSYS\MailSender\Eml
 	 */
-	public function set_title($title){
+	public function setTitle($title){
 		$this->title=$title;
 		return $this;
 	}
@@ -39,7 +39,7 @@ class Eml{
 	 * get eml title vars
 	 * @return array
 	 */
-	public function get_title(){
+	public function getTitle(){
 		return $this->title;
 	}
 	protected  $body_vars=array();
@@ -48,7 +48,7 @@ class Eml{
 	 * @param array $data
 	 * @return \LSYS\MailSender\Eml
 	 */
-	public function set_body_vars(array $data){
+	public function setBodyVars(array $data){
 		$this->body_vars=$data;
 		return $this;
 	}
@@ -56,7 +56,7 @@ class Eml{
 	 * get eml body vars
 	 * @return array
 	 */
-	public function get_body_vars(){
+	public function getBodyVars(){
 		return $this->body_vars;
 	}
 	protected $atta=array();
@@ -65,7 +65,7 @@ class Eml{
 	 * @param array $data
 	 * @return \LSYS\MailSender\Eml
 	 */
-	public function set_attachment(array $data){
+	public function setAttachment(array $data){
 		foreach ($data as $k=>$v){
 			if (!is_file($v))unset($data[$k]);
 		}
@@ -76,7 +76,7 @@ class Eml{
 	 * get eml attach vars
 	 * @return array
 	 */
-	public function get_attachment(){
+	public function getAttachment(){
 		return $this->atta;
 	}
 }

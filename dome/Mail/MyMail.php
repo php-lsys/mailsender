@@ -6,13 +6,13 @@ use LSYS\MailSender\Handler\Render;
  * @author lonely
  */
 class MyMailRender extends Render{
-	public function render_altbody(){
+	public function renderAltbody(){
 		return null;
 	}
-	function render_body(){
-		$title=$this->_eml->get_title();
+	function renderBody(){
+		$title=$this->_eml->getTitle();
 		$body='';
-		foreach ($this->_eml->get_body_vars() as $k=>$v){
+		foreach ($this->_eml->getBodyVars() as $k=>$v){
 			$body.=(is_string($k)?($k.":"):'').$v."<br/>";
 		}
 		return $this->_body($title, $body);

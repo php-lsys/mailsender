@@ -2,7 +2,7 @@
 	"name": "lsys/mailsender",
 	"type" : "library",
 	"license": "Apache-2.0",
-	"version" : "1.0.0",
+	"version" : "2.0.0",
 	"description" : "lsys module mailsender",
 	"autoload":{
 		"psr-4": {
@@ -12,14 +12,14 @@
     },
     "require": {
      	"php": ">=5.5",
-     	"lsys/config":"~1.0.0"
+     	"lsys/config":"~2.0.0"
 	},
     "require-dev": {
-    	"lsys/mailsender-phpmailer":"~1.0.0",
+    	"lsys/mailsender-phpmailer":"~2.0.0",
      	"phpmailer/phpmailer": "^v5.2.16"
 	},
 	"suggest": {
-		"lsys/mailsender-phpmailer":"~1.0.0",
-		"lsys/mailsender-sendcloud":"~1.0.0"
+		"lsys/mailsender-phpmailer":"~2.0.0",
+		"lsys/mailsender-sendcloud":"~2.0.0"
     }
 }

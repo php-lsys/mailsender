@@ -51,13 +51,13 @@ class MailSender{
 	 * @param mixed $address
 	 * @return array
 	 */
-	private function _filter_emails($address){
+	private function _filterEmails($address){
 		if (!is_array($address))return array();
 		foreach ($address as $k=>&$v){
 			if(empty($v))continue;
 			if (is_string($v)) $v=array($v,null);
 			
-			if (count($v)!=2||!$this->_valid_email(@$v[0]))unset($address[$k]);
+			if (count($v)!=2||!$this->_validEmail(@$v[0]))unset($address[$k]);
 			
 			if (@$v[1]==null) $v[1]=substr($v[0], 0,strrpos($v[0], '@'));
 		}
@@ -69,36 +69,36 @@ class MailSender{
 	 * @throws Exception
 	 */
 	public function send(Item $item){
-		$to=$item->get_tos();
-		$to=$this->_filter_emails($to);
+		$to=$item->getTos();
+		$to=$this->_filterEmails($to);
 		
 		if(count($to)==0)throw new Exception(__("send mail need to email address"));//需要收件人地址
-		$this->_handler->set_to($to);
+		$this->_handler->setTo($to);
 		
-		$cc=$this->_filter_emails($item->get_ccs());
-		if (count($cc)>0) $this->_handler->set_cc($cc);
+		$cc=$this->_filterEmails($item->getCcs());
+		if (count($cc)>0) $this->_handler->setCc($cc);
 		
-		$bcc=$this->_filter_emails($item->get_bccs());
-		if (count($bcc)>0) $this->_handler->set_bcc($bcc);
+		$bcc=$this->_filterEmails($item->getBccs());
+		if (count($bcc)>0) $this->_handler->setBcc($bcc);
 		
-		$reply=$this->_filter_emails(array($item->get_reply()));
+		$reply=$this->_filterEmails(array($item->getReply()));
 		if (count($reply)>0){
 			list($email,$name)=array_shift($reply);
-			$this->_handler->set_reply($email,$name);
+			$this->_handler->setReply($email,$name);
 		}
 		
 		$from=(array)$this->_config->get("from",array());
 		if (count($from)==2){
 			list($email,$name)=$from;
-			$this->_valid_email($email)&&$this->_handler->set_from($email,$name);
+			$this->_validEmail($email)&&$this->_handler->setFrom($email,$name);
 		}
 		
-		$eml=$item->get_eml();
+		$eml=$item->getEml();
 		if (!$eml instanceof  Eml) throw new Exception(__("send mail need eml"));//需要发送的邮件
 		
 		return $this->_handler->send($eml);
 	}
-	protected function _valid_email($email){
+	protected function _validEmail($email){
 		if (mb_strlen($email,Core::$charset) > 254)
 		{
 			return FALSE;
