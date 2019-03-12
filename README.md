@@ -5,8 +5,8 @@
 
 > 本库未实现任何邮件发送实现,请根据实际需求引入以下包:
 
-	"lsys/mailsender-phpmailer":"~1.0.0", #支持smtp等常用邮件协议发送邮件
-	"lsys/mailsender-sendcloud":"~1.0.0" #sohu的sendcloud服务
+	"lsys/mailsender-phpmailer":"~2.0.0", #支持smtp等常用邮件协议发送邮件
+	"lsys/mailsender-sendcloud":"~2.0.0" #sohu的sendcloud服务
 
 
 使用示例:
