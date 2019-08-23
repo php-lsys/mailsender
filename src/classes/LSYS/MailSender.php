@@ -22,10 +22,10 @@ class MailSender{
     public static function factory(Config $config) {
         $handler=$config->get("handler",NULL);
         if ($handler==null){
-            throw new Exception(__('Mail handler not defined in [:name] configuration',array("name"=>$config->name()) ));
+            throw new Exception(__('Mail handler not defined in [:name] configuration',array(":name"=>$config->name()) ));
         }
         if (!class_exists($handler)||!in_array(\LSYS\MailSender\Handler::class,class_parents($handler))){
-            throw new Exception(__("mail handler [:handler] wong,not extends \LSYS\MailSender\Handler",array("handler"=>$handler)));
+            throw new Exception(__("mail handler [:handler] wong,not extends \LSYS\MailSender\Handler",array(":handler"=>$handler)));
         }
         $handler=new $handler($config);
         return new static($handler,$config);
