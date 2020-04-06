@@ -3,12 +3,6 @@
 > 代码里只设置邮件内容变量,邮件内容剥离出代码层,并支持附件发送
 
 
-> 本库未实现任何邮件发送实现,请根据实际需求引入以下包:
-
-	"lsys/mailsender-phpmailer":"~2.0.0", #支持smtp等常用邮件协议发送邮件
-	"lsys/mailsender-sendcloud":"~2.0.0" #sohu的sendcloud服务
-
-
 使用示例:
 ```
 //配置文件:dome/config/mail.php
