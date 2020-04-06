@@ -14,10 +14,10 @@
 		"files": ["src/common/Bootstarp.php","src/mailsender-phpmailer/Bootstarp.php"]
     },
     "require": {
-     	"lsys/config":"~2.1.0"
+     	"lsys/config":"~2.0.0"
 	},
     "require-dev": {
-    	"lsys/mailsender-phpmailer":"~2.1.0",
+    	"lsys/mailsender-phpmailer":"~2.0.0",
      	"phpmailer/phpmailer": "^v5.2.16"
 	},
 	"suggest": {
