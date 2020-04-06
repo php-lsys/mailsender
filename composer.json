@@ -14,7 +14,7 @@
 		"files": ["src/common/Bootstarp.php","src/mailsender-phpmailer/Bootstarp.php"]
     },
     "require": {
-     	"lsys/config":"~0.0.0"
+     	"lsys/config":"~0.0.1"
 	},
     "require-dev": {
      	"phpmailer/phpmailer": "^v5.2.16"
