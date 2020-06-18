@@ -17,9 +17,9 @@
      	"lsys/config":"~0.0.1"
 	},
     "require-dev": {
-     	"phpmailer/phpmailer": "^v5.2.16"
+     	"phpmailer/phpmailer": "6.1.6"
 	},
 	"suggest": {
-		"phpmailer/phpmailer": "^v5.2.16"
+		"phpmailer/phpmailer": "6.1.6"
     }
 }
