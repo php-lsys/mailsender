@@ -12,10 +12,10 @@ use LSYS\MailSender\Handler\Render;
  * @author lonely
  */
 class Simple extends Render{
-	public function renderAltbody(){
+    public function renderAltbody():?string{
 		return null;
 	}
-	function renderBody(){
+	function renderBody():?string{
 		$title=$this->_eml->getTitle();
 		$body='';
 		

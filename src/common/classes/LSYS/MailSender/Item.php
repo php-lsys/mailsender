@@ -73,21 +73,21 @@ class Item{
 	 * 获取接收者
 	 * @return array
 	 */
-	public function getTos(){
+	public function getTos():array{
 		return $this->_to;
 	}
 	/**
 	 * 获取抄送
 	 * @return array
 	 */
-	public function getCcs(){
+	public function getCcs():array{
 		return $this->_cc;
 	}
 	/**
 	 * 获取密送
 	 * @return array
 	 */
-	public function getBccs(){
+	public function getBccs():array{
 		return $this->_bcc;
 	}
 	/**

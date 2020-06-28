@@ -51,7 +51,7 @@ class MailSender{
 	 * @param mixed $address
 	 * @return array
 	 */
-	private function _filterEmails($address){
+	private function _filterEmails($address):array {
 		if (!is_array($address))return array();
 		foreach ($address as $k=>&$v){
 			if(empty($v))continue;
@@ -99,7 +99,7 @@ class MailSender{
 		return $this->_handler->send($eml);
 	}
 	protected function _validEmail($email){
-		if (mb_strlen($email,Core::$charset) > 254)
+	    if (mb_strlen($email,Core::charset()) > 254)
 		{
 			return FALSE;
 		}

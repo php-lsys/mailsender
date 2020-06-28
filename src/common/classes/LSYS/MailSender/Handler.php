@@ -32,7 +32,7 @@ abstract class Handler{
 	 * @param string $mail_name
 	 * @return \LSYS\MailSender\Handler
 	 */
-	public function setFrom($from_mail,$mail_name=null){
+	public function setFrom(string $from_mail,string $mail_name=null){
 		$this->_from_mail=$from_mail;
 		$this->_from_name=$mail_name;
 		return $this;
@@ -43,7 +43,7 @@ abstract class Handler{
 	 * @param string $mail_name
 	 * @return \LSYS\MailSender\Handler
 	 */
-	public function setReply($reply_to_mail,$mail_name=null){
+	public function setReply(string $reply_to_mail,string $mail_name=null){
 		$this->_reply_to_mail=$reply_to_mail;
 		$this->_reply_to_name=$mail_name;
 		return $this;

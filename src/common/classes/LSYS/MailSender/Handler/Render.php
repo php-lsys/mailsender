@@ -20,12 +20,12 @@ abstract class Render{
 	 * return email alt body
 	 * @return string
 	 */
-	public function renderAltbody(){
+	public function renderAltbody():?string{
 		return null;
 	}
 	/**
 	 * return email body
 	 * return string
 	 */
-	abstract function renderBody();
+	abstract function renderBody():?string;
 }

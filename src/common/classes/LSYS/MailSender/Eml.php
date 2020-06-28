@@ -13,7 +13,7 @@ namespace LSYS\MailSender;
 class Eml{
 	protected $name;
 	/**
-	 * @param mixed $tpl
+	 * @param mixed $name
 	 */
 	public function __construct($name){
 		$this->name=$name;
@@ -56,7 +56,7 @@ class Eml{
 	 * get eml body vars
 	 * @return array
 	 */
-	public function getBodyVars(){
+	public function getBodyVars():array{
 		return $this->body_vars;
 	}
 	protected $atta=array();
@@ -76,7 +76,7 @@ class Eml{
 	 * get eml attach vars
 	 * @return array
 	 */
-	public function getAttachment(){
+	public function getAttachment():array{
 		return $this->atta;
 	}
 }
